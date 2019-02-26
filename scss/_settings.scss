@@ -1,0 +1,16 @@
+$dark1:#2d2d2d;
+$activecolor:#55b2f3;
+$textcolor1:#8b8b8b;
+$formcolor:#f8f8f8;
+
+$fz:14px;
+
+body,html{
+    background: url(../img/bodybackground.png) 100% , no-repeat;
+    font-size: $fz;
+    padding: 40px 0;
+}
+.container{
+    max-width: 1260px;
+    margin: 0 auto;
+}
