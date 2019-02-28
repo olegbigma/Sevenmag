@@ -1,13 +1,40 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 body, html {
   background: url(../img/bodybackground.png) 100%, no-repeat;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   padding: 40px 0;
 }
 
-.container {
-  max-width: 1260px;
+.wrapper {
+  width: 1260px;
   margin: 0 auto;
+  background: #fff;
+}
+
+.container {
+  max-width: 1210px;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+header {
+  background-color: #2d2d2d;
+}
+header .navbar {
+  padding: 2rem 0;
+}
+header .navbar .nav-item .nav-link {
+  padding: 0 1.8rem;
+  color: #fff;
+  border-right: 1px solid #414141;
+  line-height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
