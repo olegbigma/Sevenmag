@@ -2,12 +2,16 @@ $dark1:#2d2d2d;
 $dark2:#414141;
 $activecolor:#55b2f3;
 $textcolor1:#8b8b8b;
+$textcolor2:#b4b4b4;
+$white:#fff;
 $formcolor:#f8f8f8;
 
 $fz:14px;
 
 body,html{
-    background: url(../img/bodybackground.png) 100% , no-repeat;
+    background: url(../img/bodybackground.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     font-family: 'Roboto', sans-serif;
     font-size: $fz;
     padding: 40px 0;
@@ -15,7 +19,6 @@ body,html{
 .wrapper{
     width: 1260px;
     margin: 0 auto;
-    background: #fff;
 }
 .container {
     max-width: 1210px;
@@ -23,10 +26,40 @@ body,html{
 .border-none{
     border: none !important;
 }
+.reset{
+    margin: 0;
+    padding: 0;
+}
+p{
+    @extend .reset;
+}
 // navbar
 .dropdown-toggle{
     &::after{
         display: none;
     }
+}
+
+// Slick-slider main-slider
+.slick-dots{
+    text-align: right;
+    padding: 0 40px;
+    bottom: -40px;
+    li{
+        position: static;
+        button{
+            position: relative;
+            &:before{
+                width: 26px;
+                height: 6px;
+                content: '';
+                text-align: center;
+                background-color: #000;  
+            }
+        }
+    } 
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0; 
 }
 
