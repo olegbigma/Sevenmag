@@ -118,12 +118,16 @@
     min-height: 48px;
     margin-top: 10px;
 }
+.description a{
+    @extend .description;
+}
 .icons{
     display: flex;
     justify-content: space-between;
     color: $textcolor2;
     font-size: .8rem;
     margin-top: 10px;
+    cursor: pointer;
     i{
         margin: 0 5px;
     }
@@ -164,18 +168,30 @@ main{
       background-position: center center;
       opacity: .7; 
       padding: 150px 20px 20px;
+      &:hover{
+        .rating{
+            display: block;
+        }
+    }
       .rating{
         position: absolute;
         top: 0;
         right: 0;
         background: $dark1;
-        padding: 15px 0;
+        padding: 15px 10px;
+        display: none;
+        width: 70px;
         .score{
             color: $white;
             font-size: 1.8rem;
             text-align: center;
             display: block;
             line-height: 75%;
+        }
+        .score-descr{
+            font-size: 0.8rem;
+            line-height: 75%;
+            color: $textcolor2;
         }
       }
     }
