@@ -43,26 +43,6 @@ p{
     }
 }
 
-// Slick-slider main-slider
-.slick-dots{
-    text-align: right;
-    padding: 0 40px;
-    bottom: -40px;
-    li{
-        position: static;
-        button{
-            position: relative;
-            &:before{
-                width: 26px;
-                height: 6px;
-                content: '';
-                text-align: center;
-                background-color: #000;  
-            }
-        }
-    } 
-}
-.slick-dotted.slick-slider {
-    margin-bottom: 0; 
-}
+
+
 

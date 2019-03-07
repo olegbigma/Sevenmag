@@ -102,6 +102,28 @@
     .sixth-img{
         background-image: url(../img/sport.jpg);
     }
+    // Slick-slider main-slider dots 
+    .slick-dots{
+        text-align: right;
+        padding: 0 40px;
+        bottom: -40px;
+        li{
+            position: static;
+            button{
+                position: relative;
+                &:before{
+                    width: 26px;
+                    height: 6px;
+                    content: '';
+                    text-align: center;
+                    background-color: #000;  
+                }
+            }
+        } 
+    }
+    .slick-dotted.slick-slider {
+        margin-bottom: 0; 
+    }
 }
 .main-slider__image{
     width: 100%;
@@ -151,7 +173,7 @@ main{
         background-size: 100% 100%; 
      }
 }
-.posts{
+.posts , .block-border{
     border-top: 2px solid $dark1;
     border-bottom: 1px solid $textcolor1;
     border-left: 1px solid $textcolor1;
@@ -169,6 +191,7 @@ main{
       opacity: .7; 
       padding: 150px 20px 20px;
       &:hover{
+          opacity: 1;
         .rating{
             display: block;
         }
@@ -265,7 +288,7 @@ main{
 // carousel posts
 .left-slider{
     @extend .posts;
-    padding: 20px 10px 0;
+    padding: 20px 10px;
     .first-img{
         background-image: url(../img/music.jpg);
     }
@@ -284,12 +307,78 @@ main{
     .description{
         color: $dark1;
     }
+    // Slick-slider main-slider dots 
+    .slick-dots{
+        text-align: right;
+        padding: 0;
+        top: -44px;
+        li{
+            position: static;
+            width: 5px;
+            button{
+                position: relative;
+                &:before{
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    content: '';
+                    text-align: center;
+                    background-color: #000;  
+                }
+            }
+        } 
+    }
+    .slick-dotted.slick-slider {
+        margin-bottom: 0; 
+    }
 }
 .left-slider__image{
     @extend .main-slider__image;
     height: 115px;
-    opacity: 1;
-    
+    opacity: 1;  
+}
+
+// enterteinment
+.entertainment{
+    @extend .posts;
+    margin-bottom: 40px;
+    .post{
+        height: 320px;
+        padding: 220px 20px 20px;
+        opacity: 1;
+    }
+    .image{
+        width: 65px;
+        height: 65px;
+        background-size: cover;
+        background-position: center center;
+        margin-right: 20px;
+    }
+    .text{
+        width: 160px;
+    }
+    .first-image{
+        background-image: url(../img/health.jpg);
+    }
+    .second-image{
+        background-image: url(../img/interview.jpg);
+    }
+    .third-image{
+        background-image: url(../img/game.jpg);
+    }
+    .fourth-image{
+        background-image: url(../img/business.jpg);
+    }
+    .icons{
+        justify-content: flex-start;
+    }
+}
+.entertainment__item{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px ;
+    margin-bottom: 9px;
+    border-bottom: 1px solid $formcolor;
 }
 
     
