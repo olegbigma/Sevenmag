@@ -84,14 +84,6 @@
             }
         } 
     }
-    .main-slider__image{
-        width: 100%;
-        height: 255px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        opacity: .6;
-    }
     .first-img{
         background-image: url(../img/photography.jpg);
     }
@@ -110,6 +102,14 @@
     .sixth-img{
         background-image: url(../img/sport.jpg);
     }
+}
+.main-slider__image{
+    width: 100%;
+    height: 255px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: .6;
 }
 .description{
     font-size: $fz+2px;
@@ -140,12 +140,12 @@ main{
 }
 .subtitle{
     h4{
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         font-weight: 700;
         color: $dark1;
     }
     .rectangle{
-        width: 80%;
+        width: 75%;
         height: 15px;
         background-image: url(../img/Rectangle2.png);
         background-size: 100% 100%; 
@@ -210,6 +210,86 @@ main{
     .bottom-posts{
         margin-top: 20px;
     }
+}
+// news-in-picture
+.news-in-picture{
+    @extend .posts;
+    .main-news{
+        @extend .post;
+        background-image: url(../img/sports7.jpg);
+        width: 240px;
+        opacity: 1;
+    }
+    .other-news{
+        width: 240px;
+        .second-row{
+            margin: 15px 0;
+        }
+        .news{
+            width: 70px;
+            height: 70px;
+            background-size: auto 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .news1{
+            background-image: url(../img/sports1.jpg);
+        }
+        .news2{
+            background-image: url(../img/sports2.jpg);
+        }
+        .news3{
+            background-image: url(../img/sports3.jpg);
+        }
+        .news4{
+            background-image: url(../img/sports4.jpg);
+        }
+        .news5{
+            background-image: url(../img/sports5.jpg);
+        }
+        .news6{
+            background-image: url(../img/sports6.jpg);
+        }
+        .news7{
+            background-image: url(../img/sports8.jpg);
+        }
+        .news8{
+            background-image: url(../img/sports9.jpg);
+        }
+        .news9{
+            background-image: url(../img/sports10.jpg);
+        }
+    }
+}
+// carousel posts
+.left-slider{
+    @extend .posts;
+    padding: 20px 10px 0;
+    .first-img{
+        background-image: url(../img/music.jpg);
+    }
+    .second-img{
+        background-image: url(../img/sports10.jpg);
+    }
+    .third-img{
+        background-image: url(../img/sports11.jpg);
+    }
+    .fourth-img{
+        background-image: url(../img/sports7.jpg);
+    }
+    &__item{
+        margin: 0 10px;;
+    }
+    .description{
+        color: $dark1;
+    }
+}
+.left-slider__image{
+    @extend .main-slider__image;
+    height: 115px;
+    opacity: 1;
+    
 }
 
     

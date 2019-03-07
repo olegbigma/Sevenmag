@@ -33,6 +33,9 @@ body,html{
 p{
     @extend .reset;
 }
+.offset-down{
+    margin-top: 45px;
+}
 // navbar
 .dropdown-toggle{
     &::after{
