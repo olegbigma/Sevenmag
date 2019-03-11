@@ -33,3 +33,20 @@ $('.multiple-items').slick({
                }
       }]
   });
+
+  $('.single-slider-posts').slick({
+    infinite: true,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows:true,
+    responsive: [
+      {
+        breakpoint: 998,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+               }
+      }]
+  });

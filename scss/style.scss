@@ -133,15 +133,12 @@
     background-position: center center;
     opacity: .6;
 }
-.description{
+.description , .description a{
     font-size: $fz+2px;
     color: $white;
     font-weight: bold;
     min-height: 48px;
     margin-top: 10px;
-}
-.description a{
-    @extend .description;
 }
 .icons{
     display: flex;
@@ -181,7 +178,7 @@ main{
     -webkit-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    0px 1px 3px 0px rgba(50, 50, 50, 0.75);
     box-shadow:         0px 1px 3px 0px rgba(50, 50, 50, 0.75);
-    padding: 20px 10px;
+    padding: 20px;
     .post{
       position: relative;
       width: 240px;
@@ -342,20 +339,11 @@ main{
 .entertainment{
     @extend .posts;
     margin-bottom: 40px;
+    padding: 20px 10px;
     .post{
         height: 320px;
         padding: 220px 20px 20px;
         opacity: 1;
-    }
-    .image{
-        width: 65px;
-        height: 65px;
-        background-size: cover;
-        background-position: center center;
-        margin-right: 20px;
-    }
-    .text{
-        width: 160px;
     }
     .first-image{
         background-image: url(../img/health.jpg);
@@ -373,12 +361,183 @@ main{
         justify-content: flex-start;
     }
 }
+.image{
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+    background-position: center center;
+    margin-right: 20px;
+}
+.text{
+    width: 170px;
+    font-weight: 700;
+}
 .entertainment__item{
     display: flex;
     justify-content: space-around;
     padding-bottom: 10px ;
     margin-bottom: 9px;
     border-bottom: 1px solid $formcolor;
+    &:last-child{
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+    }
 }
-
-    
+// right-part
+// popular-posts
+.right-part{
+    .subtitle{
+        .rectangle{
+            width: 55%;
+            margin-left: 15px;
+        }
+    }
+}
+.popular-posts{
+    @extend .entertainment;
+    .entertainment__item{
+        .first-image{
+            background-image: url(../img/popular1.jpg);
+        }
+        .second-image{
+            background-image: url(../img/popular2.jpg);
+        }
+        .third-image{
+            background-image: url(../img/popular3.jpg);
+        }
+        .fourth-image{
+            background-image: url(../img/popular4.jpg);
+        }
+    }
+    .icons{
+        justify-content: flex-start;
+    }
+}
+// poll
+.poll{
+    @extend .entertainment;
+    .poll__question{
+        font-size: $fz+2px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .poll__radio{
+        margin: 25px 0 5px;
+    }
+    .custom-control{
+        padding-left: 2.5rem;
+        padding-bottom: 1rem;
+    }
+    .custom-control-label{
+        &::before{
+           left: -2rem; 
+        }
+    }
+    .custom-control-input{
+        cursor: pointer;
+        &:checked{
+            ~.custom-control-label{
+                color: $activecolor;
+                &::after{
+                    background-image: none;
+                }
+            }
+        }
+    }
+    .buttons{
+        margin-left: 5px;
+        .vote , .view-results{
+            padding: 9px 20px;
+            background-color: $dark1;
+            color: $white;
+            margin-right: 10px;
+            text-decoration: none;
+            &:hover{
+                background-color: $activecolor;
+            }
+        }
+    }
+}
+// slider-posts
+.slider-posts{
+    @extend .posts;
+    &__item{
+        @extend .post;
+        opacity: 1;
+        padding: 170px 20px 20px;
+        .description{
+            min-height: 20px;
+        }
+    }
+    .single-slider-posts{
+        .first-item{
+            background-image: url(../img/business.jpg);
+        }
+        .second-item{
+            background-image: url(../img/game.jpg);
+        }
+    }
+    // slick arrows
+    .slick-prev , .slick-next{
+        &:before{
+            content: '';
+            color: $dark1;
+            width: 10px;
+            height: 10px;
+            border-left: 2px solid $textcolor1;
+            border-bottom: 2px solid $textcolor1;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -153px;
+            left: 270px;
+        }
+    }
+    .slick-next{
+        &::before{
+            transform: rotate(225deg);
+            left: 5px;
+        }
+    }
+}
+// Tags
+.tags{
+    @extend .posts;
+    padding: 15px 12px;
+    &__group{
+        display: flex;
+        margin-bottom: 5px;
+        .tag{
+            padding: 10px 15px;
+            background: $dark1;
+            color: $white;
+            border-radius: 3px;
+            display: block;
+            margin-right: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover{
+                background: $activecolor;
+                transition: all 0.3s;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+// Newsletters
+.newsletters{
+    @extend .posts;
+    padding: 20px 20px 10px;
+    .form-control{
+        font-size: 11px;
+        font-style: italic;
+        background: $formcolor url(../img/thumbs-up.png) no-repeat center right;
+        padding: 17px 10px;
+    }
+}
+// video-widget
+.video-widget{
+    @extend .posts;
+}
