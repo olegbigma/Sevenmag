@@ -414,6 +414,80 @@ main{
         justify-content: flex-start;
     }
 }
+// socials
+.socials{
+    .social{
+        width: 30%;
+        padding: 15px 0;
+        text-align: center;
+        border-radius: 3px;
+        color: $white;
+        .circle{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle-fb{
+            background-color: darken(#325c94,5%);
+        }
+        .circle-tw{
+            background-color: darken(#4fc0e9,5%);
+        }
+        .circle-wf{
+            background-color: darken(#f78634,5%);
+        }
+        span{
+            display: block;
+            margin-top: 12px;
+            line-height: 1.1;
+        }
+        i{
+            font-size: 20px;
+        }
+    }
+    .fb{
+        background: #325c94;
+    }
+    .tw{
+        background: #4fc0e9;
+    }
+    .wf{
+        background: #f78634;
+    }
+}
+// sponsor
+.sponsor{
+    border: 1px solid $textcolor1;
+    padding: 15px 10px 10px;
+    position: relative;
+    .sponsor__title{
+        text-transform: uppercase;
+        display: block;
+        padding: 5px 10px;
+        position: absolute;
+        color: $textcolor1;
+        font-size: .8rem;
+        background: $white;
+        top: -14px;
+    }
+    .sponsor__img-big{
+        width: 100%;   
+    }
+    .sponsor__container{
+        margin-top: 14px;
+    }
+    .sponsor__img-small{
+        width: 118px;
+    }
+    .sponsor__img{
+        background-color: $formcolor;
+        height: 118px;
+    }
+}
 // poll
 .poll{
     @extend .entertainment;
@@ -462,7 +536,7 @@ main{
 // slider-posts
 .slider-posts{
     @extend .posts;
-    &__item{
+    .slider-posts__item{
         @extend .post;
         opacity: 1;
         padding: 170px 20px 20px;
@@ -490,7 +564,7 @@ main{
             transform: rotate(45deg);
             position: absolute;
             top: -153px;
-            left: 270px;
+            left: 255px;
         }
     }
     .slick-next{
