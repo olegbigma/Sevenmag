@@ -8,37 +8,63 @@ $formcolor:#f8f8f8;
 
 $fz:14px;
 
-body,html{
-    background: url(../img/bodybackground.png);
+// mixins
+
+@mixin block-border{
+    border-top: 2px solid $dark1;
+    border-bottom: 1px solid $textcolor1;
+    border-left: 1px solid $textcolor1;
+    border-right: 1px solid $textcolor1;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 1px 3px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 1px 3px 0px rgba(50, 50, 50, 0.75);
+}
+@mixin reset{
+    margin: 0;
+    padding: 0;
+}
+@mixin slider-image{
+    width: 100%;   
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center center;
+}
+@mixin offset-down{
+    margin-top: 45px;
+}
+body,html{
+    background: url(../img/bodybackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
     font-size: $fz;
     padding: 40px 0;
 }
 .wrapper{
-    width: 1260px;
+    max-width:1260px;
     margin: 0 auto;
 }
 .container {
     max-width: 1210px;
 }
+.reset-margin{
+    margin: 0 !important;
+}
 .border-none{
     border: none !important;
 }
-.reset{
-    margin: 0;
-    padding: 0;
-}
 p{
-    @extend .reset;
+    @include reset;
 }
-.offset-down{
+@mixin offset-down{
     margin-top: 45px;
 }
 .col-md-6{
     padding-right: 10px;
     padding-left: 10px;
+}
+.col-md , .col-sm-3 , .col-sm-9 , .col-xl{
+    padding: 0;
 }
 // navbar
 .dropdown-toggle{
@@ -46,7 +72,6 @@ p{
         display: none;
     }
 }
-
 
 
 
